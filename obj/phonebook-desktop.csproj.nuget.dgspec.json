@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bryan\\Documents\\Projects\\phonebook-desktop\\phonebook-desktop.csproj": {}
+    "C:\\Users\\Bryant Kyle\\Documents\\Projects\\phonebook-desktop\\phonebook-desktop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bryan\\Documents\\Projects\\phonebook-desktop\\phonebook-desktop.csproj": {
+    "C:\\Users\\Bryant Kyle\\Documents\\Projects\\phonebook-desktop\\phonebook-desktop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bryan\\Documents\\Projects\\phonebook-desktop\\phonebook-desktop.csproj",
+        "projectUniqueName": "C:\\Users\\Bryant Kyle\\Documents\\Projects\\phonebook-desktop\\phonebook-desktop.csproj",
         "projectName": "phonebook-desktop",
-        "projectPath": "C:\\Users\\bryan\\Documents\\Projects\\phonebook-desktop\\phonebook-desktop.csproj",
-        "packagesPath": "C:\\Users\\bryan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bryan\\Documents\\Projects\\phonebook-desktop\\obj\\",
+        "projectPath": "C:\\Users\\Bryant Kyle\\Documents\\Projects\\phonebook-desktop\\phonebook-desktop.csproj",
+        "packagesPath": "C:\\Users\\Bryant Kyle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bryant Kyle\\Documents\\Projects\\phonebook-desktop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bryant Kyle\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

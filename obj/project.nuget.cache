@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sHdinuqngwBgt3qq+/FUUgjkQ+WmfGazrO3zI1ShsITFidq6W2mwfP2EpmRDGHLt2bvQYdXHvSy9TAv/i6mAEQ==",
+  "dgSpecHash": "XK/f3QZq30/xgASbBSEAJaT1VRGdILswAD/lFh7dSSMfQpIc/3gmTCztvuTumEupB79MmRyGCO5dIqzjhB1NpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bryan\\Documents\\Projects\\phonebook-desktop\\phonebook-desktop.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Bryant Kyle\\Documents\\Projects\\phonebook-desktop\\phonebook-desktop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bryant Kyle\\.nuget\\packages\\materialdesigncolors\\2.0.4\\materialdesigncolors.2.0.4.nupkg.sha512",
+    "C:\\Users\\Bryant Kyle\\.nuget\\packages\\materialdesignthemes\\4.3.0\\materialdesignthemes.4.3.0.nupkg.sha512"
+  ],
   "logs": []
 }

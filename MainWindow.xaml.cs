@@ -1,4 +1,5 @@
-﻿using System;
+﻿using phonebook_desktop.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,8 +28,8 @@ namespace phonebook_desktop
 
         private void btnClick_AddContact(object sender, RoutedEventArgs e)
         {
-            CreateNewContact createNewContactWindow = new CreateNewContact();
-            this.Visibility = Visibility.Hidden;
+            Create createNewContactWindow = new Create();
+            this.Close();
             createNewContactWindow.Show();
         }
     }
