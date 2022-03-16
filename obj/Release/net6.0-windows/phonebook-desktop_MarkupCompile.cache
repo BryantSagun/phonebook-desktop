@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\App.xaml
-2-554317871
+3-1172361644
 
-4-1072346971
-1941645785384
-CreateNewContact.xaml;MainWindow.xaml;
+936873449
+207747858160
+MainWindow.xaml;Views\Create.xaml;Views\Edit.xaml;
 
 True
 

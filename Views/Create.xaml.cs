@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using phonebook_desktop.Controllers;
 
 namespace phonebook_desktop.Views
 {
@@ -26,7 +27,10 @@ namespace phonebook_desktop.Views
 
         private void btnClick_SaveContact(object sender, RoutedEventArgs e)
         {
-            
+            contactController.createContact(lastName.Text, firstName.Text, middleName.Text, gender.Text, phoneNumber.Text);
+            MainWindow mainWindow = new MainWindow();
+            this.Close();
+            mainWindow.Show();
         }
 
         private void btnClick_BackToHome(object sender, RoutedEventArgs e)

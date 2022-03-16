@@ -27,7 +27,7 @@
                 <Label FontSize="50"
                        Foreground="#FFFFFF" 
                        Margin="20,0,0,0"
-                       VerticalAlignment="Center">Contacts</Label>
+                       VerticalAlignment="Center">Phonebook</Label>
             </Grid>
             <Grid Grid.Column="1">
                 <Button FontSize="20" 
@@ -50,7 +50,63 @@
         </Grid>
         <Grid Grid.Row="1">
             <Grid Grid.ColumnSpan="2">
-                <Label></Label>
+                <DataGrid Name="contactslist"
+                          IsReadOnly="True"
+                          ColumnWidth="200"
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          FontSize="14">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Width="Auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Button
+                                            Background="#253DA1"
+                                            Click="btnClick_EditContact"
+                                            >
+                                            <Button.Content>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <md:PackIcon Kind="ApplicationEditOutline" 
+                                                     VerticalAlignment="Center"
+                                                     Height="30"
+                                                     Width="30"/>
+                                                </StackPanel>
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Width="Auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Button
+                                            Background="#BA0001"
+                                            Click="btnClick_DeleteContact"
+                                            Tag="{Binding ID}">
+                                            <Button.Content>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <md:PackIcon Kind="Delete" 
+                                                     VerticalAlignment="Center"
+                                                     Height="30"
+                                                     Width="30"/>
+                                                </StackPanel>
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Binding="{Binding ID}" Header="ID" Width="0"/>
+                        <DataGridTextColumn Binding="{Binding LastName}" Header="Last Name" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding FirstName}" Header="First Name" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding MiddleName}" Header="Middle Name" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding Gender}" Header="Gender" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="Phone Number" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
         <Grid Grid.Row="2" Background="#131313">
