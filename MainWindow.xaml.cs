@@ -1,8 +1,10 @@
 ﻿using phonebook_desktop.Controllers;
+using phonebook_desktop.Models;
 using phonebook_desktop.Views;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -22,12 +24,12 @@ namespace phonebook_desktop
 {
     public partial class MainWindow : Window
     {
+        dbController dbc = new dbController();
         public MainWindow()
         {
             InitializeComponent();
-            contactController.getContacts(contactslist);
+            contactslist.ItemsSource = contactController.getContacts().DefaultView;
             contactslist.Items.Refresh();
-            contactslist.Columns[2].Visibility = Visibility.Collapsed;
         }
 
         private void btnClick_AddContact(object sender, RoutedEventArgs e)
@@ -39,12 +41,12 @@ namespace phonebook_desktop
 
         private void btnClick_EditContact(object sender, RoutedEventArgs e)
         {
-            DataRowView row = (DataRowView)contactslist.SelectedItem;
-            string lastName = row.Row["lastName"] as string;
-            string firstName = row.Row["firstName"] as string;
-            string middleName = row.Row["middleName"] as string;
-            string gender = row.Row["gender"] as string;
-            string phoneNumber = row.Row["phoneNumber"] as string;
+            string lastName = "";
+            string firstName = "";
+            string middleName = "";
+            string gender = "";
+            string phoneNumber = "";
+            
             Edit editContact = new Edit(lastName, firstName, middleName, gender, phoneNumber);
             this.Close();
             editContact.Show();
@@ -52,9 +54,10 @@ namespace phonebook_desktop
 
         private void btnClick_DeleteContact(object sender, RoutedEventArgs e)
         {
-            contactController.deleteContact(12);
-            contactslist.ItemsSource = null;
-            contactController.getContacts(contactslist);
+            contactController.deleteContact(15);
+            DataTable records = dbc.getContacts();
+            contactslist.ItemsSource = records.DefaultView;
+            contactslist.Items.Refresh();
         }
     }
 }

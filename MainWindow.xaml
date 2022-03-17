@@ -45,7 +45,8 @@
                                          Width="30"/>
                             <Label Content="New Contact" />
                         </StackPanel>
-                    </Button.Content></Button>
+                    </Button.Content>
+                </Button>
             </Grid>
         </Grid>
         <Grid Grid.Row="1">
@@ -55,7 +56,8 @@
                           ColumnWidth="200"
                           AutoGenerateColumns="False"
                           CanUserAddRows="False"
-                          FontSize="14">
+                          FontSize="14"
+                          >
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Width="Auto">
                             <DataGridTemplateColumn.CellTemplate>

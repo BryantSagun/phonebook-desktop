@@ -8,13 +8,13 @@ C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windo
 phonebook_desktop
 none
 false
-TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\App.xaml
 3-1172361644
 
-936873449
-207747858160
+13418744962
+4141495716320
 MainWindow.xaml;Views\Create.xaml;Views\Edit.xaml;
 
-False
+True
 

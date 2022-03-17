@@ -20,6 +20,7 @@ namespace phonebook_desktop.Views
     /// </summary>
     public partial class Create : Window
     {
+        dbController dbc = new dbController();
         public Create()
         {
             InitializeComponent();

@@ -21,13 +21,6 @@ C:\Users\bryan\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\ref
 C:\Users\bryan\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\phonebook-desktop.pdb
 C:\Users\bryan\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\phonebook-desktop.genruntimeconfig.cache
 C:\Users\bryan\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\ref\phonebook-desktop.dll
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\phonebook-desktop.csproj.AssemblyReference.cache
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\Views\Create.g.cs
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\Views\Edit.g.cs
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\App.g.cs
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\phonebook-desktop_MarkupCompile.cache
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\phonebook-desktop_MarkupCompile.lref
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\phonebook-desktop.exe
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\phonebook-desktop.deps.json
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\phonebook-desktop.runtimeconfig.json
@@ -49,6 +42,19 @@ C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windo
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\phonebook-desktop.csproj.AssemblyReference.cache
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\Views\Create.g.cs
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\Views\Edit.g.cs
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\phonebook-desktop_MarkupCompile.cache
+C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\phonebook-desktop_MarkupCompile.lref
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\App.baml
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\Views\Create.baml
@@ -64,9 +70,3 @@ C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windo
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\phonebook-desktop.pdb
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\phonebook-desktop.genruntimeconfig.cache
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\obj\Debug\net6.0-windows\ref\phonebook-desktop.dll
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

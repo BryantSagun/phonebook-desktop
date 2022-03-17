@@ -1,4 +1,5 @@
-﻿using System;
+﻿using phonebook_desktop.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,13 +26,13 @@ namespace phonebook_desktop.Views
             this.lastName.Text = lastName;
             this.firstName.Text = firstName;
             this.middleName.Text = middleName;
-            this.gender.SelectedIndex = 1;
+            this.gender.Text = gender;
             this.phoneNumber.Text = phoneNumber;
         }
 
         private void btnClick_EditContact(object sender, RoutedEventArgs e)
         {
-
+            contactController.editContact(lastName.Text, firstName.Text, middleName.Text, gender.Text, phoneNumber.Text, 1);
         }
 
         private void btnClick_BackToHome(object sender, RoutedEventArgs e)

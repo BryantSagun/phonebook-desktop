@@ -132,7 +132,7 @@
                                              VerticalAlignment="Center"
                                              Height="30"
                                              Width="30"/>
-                                <Label Content="Save" Foreground="White"/>
+                                <Label Content="Edit" Foreground="White"/>
                             </StackPanel>
                         </Button.Content>
                     </Button>
