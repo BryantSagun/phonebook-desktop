@@ -57,8 +57,28 @@
                           AutoGenerateColumns="False"
                           CanUserAddRows="False"
                           FontSize="14"
-                          
                           >
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="FontWeight"  Value="Bold" />
+                            <Setter Property="HorizontalAlignment" Value="Stretch" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="Background" Value="#3F3F3F"/>
+                            <Setter Property="Foreground" Value="#FFFFFF"/>
+                            <Setter Property="Height" Value="60"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#494848" />
+                                    <Setter Property="Foreground" Value="#FFFFFF" />
+                                    <Setter Property="FontWeight" Value="Bold" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.RowStyle>
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Width="Auto">
                             <DataGridTemplateColumn.CellTemplate>
@@ -66,14 +86,16 @@
                                     <StackPanel>
                                         <Button
                                             Background="#253DA1"
+                                            BorderBrush="#253DA1"
                                             Click="btnClick_EditContact"
                                             >
                                             <Button.Content>
                                                 <StackPanel Orientation="Horizontal">
                                                     <md:PackIcon Kind="ApplicationEditOutline" 
                                                      VerticalAlignment="Center"
-                                                     Height="30"
-                                                     Width="30"/>
+                                                     Height="15"
+                                                     Width="15"
+                                                    />
                                                 </StackPanel>
                                             </Button.Content>
                                         </Button>
@@ -87,13 +109,15 @@
                                     <StackPanel>
                                         <Button
                                             Background="#BA0001"
+                                            BorderBrush="#BA0001"
                                             Click="btnClick_DeleteContact">
                                             <Button.Content>
                                                 <StackPanel Orientation="Horizontal">
                                                     <md:PackIcon Kind="Delete" 
                                                      VerticalAlignment="Center"
-                                                     Height="30"
-                                                     Width="30"/>
+                                                     Height="15"
+                                                     Width="15"
+                                                    />
                                                 </StackPanel>
                                             </Button.Content>
                                         </Button>

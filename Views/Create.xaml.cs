@@ -28,7 +28,11 @@ namespace phonebook_desktop.Views
 
         private void btnClick_SaveContact(object sender, RoutedEventArgs e)
         {
-            contactController.createContact(lastName.Text, firstName.Text, middleName.Text, gender.Text, phoneNumber.Text);
+            contactController.createContact(lastName.Text.ToUpper(), 
+                firstName.Text.ToUpper(), 
+                middleName.Text.ToUpper(), 
+                gender.Text, 
+                phoneNumber.Text);
             MainWindow mainWindow = new MainWindow();
             this.Close();
             mainWindow.Show();
