@@ -42,15 +42,15 @@ namespace phonebook_desktop.Controllers
             SqlCommand cmd = thisConnection.CreateCommand();
             executeQuery(query, cmd);
         }
-        public void deleteContact(int id)
+        public void deleteContact(string id)
         {
             query = $"EXEC usp_DeleteRecords {id}";
             SqlCommand cmd = thisConnection.CreateCommand();
             executeQuery(query, cmd);
         }
-        public void editContact(string lastname, string firstname, string middlename, string gender, string phonenumber, int id)
+        public void editContact(string lastname, string firstname, string middlename, string gender, string phonenumber, string id)
         {
-            query = $"EXEC_UpdateSingleRecord '{lastname}', '{firstname}', '{middlename}', '{gender}', '{phonenumber}', '{id}'";
+            query = $"EXEC usp_UpdateSingleRecord '{lastname}', '{firstname}', '{middlename}', '{gender}', '{phonenumber}', '{id}'";
             SqlCommand cmd = thisConnection.CreateCommand();
             executeQuery(query, cmd);
         }

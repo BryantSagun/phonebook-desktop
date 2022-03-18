@@ -57,6 +57,7 @@
                           AutoGenerateColumns="False"
                           CanUserAddRows="False"
                           FontSize="14"
+                          
                           >
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Width="Auto">
@@ -86,8 +87,7 @@
                                     <StackPanel>
                                         <Button
                                             Background="#BA0001"
-                                            Click="btnClick_DeleteContact"
-                                            Tag="{Binding ID}">
+                                            Click="btnClick_DeleteContact">
                                             <Button.Content>
                                                 <StackPanel Orientation="Horizontal">
                                                     <md:PackIcon Kind="Delete" 
@@ -101,7 +101,6 @@
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTextColumn Binding="{Binding ID}" Header="ID" Width="0"/>
                         <DataGridTextColumn Binding="{Binding LastName}" Header="Last Name" Width="*"/>
                         <DataGridTextColumn Binding="{Binding FirstName}" Header="First Name" Width="*"/>
                         <DataGridTextColumn Binding="{Binding MiddleName}" Header="Middle Name" Width="*"/>

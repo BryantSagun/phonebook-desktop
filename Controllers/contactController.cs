@@ -22,12 +22,12 @@ namespace phonebook_desktop.Controllers
             dbController dbc = new dbController();
             dbc.createNewContact(lastname, firstname, middlename, gender, phonenumber);
         }
-        public static void editContact(string lastname, string firstname, string middlename, string gender, string phonenumber, int id)
+        public static void editContact(string lastname, string firstname, string middlename, string gender, string phonenumber, string id)
         {
             dbController dbc = new dbController();
             dbc.editContact(lastname, firstname, middlename, gender, phonenumber, id);
         }
-        public static void deleteContact(int id)
+        public static void deleteContact(string id)
         {
             dbController dbc = new dbController();
             dbc.deleteContact(id);

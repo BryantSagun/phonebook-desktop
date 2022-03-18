@@ -15,14 +15,12 @@ using System.Windows.Shapes;
 
 namespace phonebook_desktop.Views
 {
-    /// <summary>
-    /// Interaction logic for Edit.xaml
-    /// </summary>
     public partial class Edit : Window
     {
-        public Edit(string lastName, string firstName, string middleName, string gender, string phoneNumber)
+        public Edit(string lastName, string firstName, string middleName, string gender, string phoneNumber, string id)
         {
             InitializeComponent();
+            this.ID.Text = id;
             this.lastName.Text = lastName;
             this.firstName.Text = firstName;
             this.middleName.Text = middleName;
@@ -32,7 +30,10 @@ namespace phonebook_desktop.Views
 
         private void btnClick_EditContact(object sender, RoutedEventArgs e)
         {
-            contactController.editContact(lastName.Text, firstName.Text, middleName.Text, gender.Text, phoneNumber.Text, 1);
+            contactController.editContact(lastName.Text, firstName.Text, middleName.Text, gender.Text, phoneNumber.Text, ID.Text);
+            MainWindow mainWindow = new MainWindow();
+            this.Close();
+            mainWindow.Show();
         }
 
         private void btnClick_BackToHome(object sender, RoutedEventArgs e)

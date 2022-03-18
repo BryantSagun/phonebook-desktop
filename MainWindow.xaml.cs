@@ -41,20 +41,23 @@ namespace phonebook_desktop
 
         private void btnClick_EditContact(object sender, RoutedEventArgs e)
         {
-            string lastName = "";
-            string firstName = "";
-            string middleName = "";
-            string gender = "";
-            string phoneNumber = "";
+            DataRowView row = (DataRowView)contactslist.SelectedItem;
+            string lastName = row["LastName"].ToString();
+            string firstName = row["FirstName"].ToString();
+            string middleName = row["MiddleName"].ToString();
+            string gender = row["Gender"].ToString();
+            string phoneNumber = row["PhoneNumber"].ToString();
+            string id = row["ID"].ToString();
             
-            Edit editContact = new Edit(lastName, firstName, middleName, gender, phoneNumber);
+            Edit editContact = new Edit(lastName, firstName, middleName, gender, phoneNumber, id);
             this.Close();
             editContact.Show();
         }
 
         private void btnClick_DeleteContact(object sender, RoutedEventArgs e)
         {
-            contactController.deleteContact(15);
+            DataRowView row = (DataRowView)contactslist.SelectedItem;
+            contactController.deleteContact(row["ID"].ToString());
             DataTable records = dbc.getContacts();
             contactslist.ItemsSource = records.DefaultView;
             contactslist.Items.Refresh();
