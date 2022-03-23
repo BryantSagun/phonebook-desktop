@@ -32,5 +32,19 @@ namespace phonebook_desktop.Controllers
             dbController dbc = new dbController();
             dbc.deleteContact(id);
         }
+
+        public static Boolean checkValidString(string data)
+        {
+            Boolean result = false;
+            if (!String.IsNullOrEmpty(data) & 
+                !(data.Trim().Length == 0)) result = true;
+            return result;
+        }
+
+        public static Boolean checkIfStringIsNumeric(string data)
+        {
+            double number;
+            return double.TryParse(data, out number);
+        }
     }
 }

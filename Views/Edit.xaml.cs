@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -30,10 +31,32 @@ namespace phonebook_desktop.Views
 
         private void btnClick_EditContact(object sender, RoutedEventArgs e)
         {
-            contactController.editContact(lastName.Text, firstName.Text, middleName.Text, gender.Text, phoneNumber.Text, ID.Text);
-            MainWindow mainWindow = new MainWindow();
-            this.Close();
-            mainWindow.Show();
+            if (!contactController.checkValidString(lastName.Text) |
+                   !contactController.checkValidString(firstName.Text) |
+                   !contactController.checkValidString(middleName.Text) |
+                   !contactController.checkValidString(gender.Text) |
+                   !contactController.checkValidString(phoneNumber.Text)
+                   )
+            {
+                MessageBox.Show("There are empty fields. Please check your form.");
+            }
+            else if (!contactController.checkIfStringIsNumeric(phoneNumber.Text))
+            {
+                MessageBox.Show("Contact Number is invalid. Please update the field.");
+            }
+            else
+            {
+                contactController.editContact(
+                    lastName.Text.ToUpper(), 
+                    firstName.Text.ToUpper(), 
+                    middleName.Text.ToUpper(), 
+                    gender.Text, 
+                    phoneNumber.Text, 
+                    ID.Text);
+                MainWindow mainWindow = new MainWindow();
+                this.Close();
+                mainWindow.Show();
+            }
         }
 
         private void btnClick_BackToHome(object sender, RoutedEventArgs e)
@@ -41,6 +64,18 @@ namespace phonebook_desktop.Views
             MainWindow mainWindow = new MainWindow();
             this.Close();
             mainWindow.Show();
+        }
+
+        private void AllowNumbersOnlyInTextbox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void AllowAlphabetsOnlyInTextbox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = !regex.IsMatch(e.Text);
         }
     }
 }

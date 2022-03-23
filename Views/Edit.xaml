@@ -70,7 +70,8 @@
                         Height="60"
                         Width="330"
                         FontSize="20"
-                        HorizontalAlignment="Left">
+                        HorizontalAlignment="Left"
+                        PreviewTextInput="AllowAlphabetsOnlyInTextbox">
                     </TextBox>
                     <TextBox 
                         x:Name="middleName"
@@ -81,7 +82,8 @@
                         Height="60"
                         Width="160"
                         FontSize="20"
-                        HorizontalAlignment="Right">
+                        HorizontalAlignment="Right"
+                        PreviewTextInput="AllowAlphabetsOnlyInTextbox">
                     </TextBox>
                 </Grid>
                 <Grid Grid.Row="3">
@@ -94,7 +96,8 @@
                         Height="60"
                         Width="500"
                         FontSize="20"
-                        HorizontalAlignment="Left">
+                        HorizontalAlignment="Left"
+                        PreviewTextInput="AllowAlphabetsOnlyInTextbox">
                     </TextBox>
                 </Grid>
                 <Grid Grid.Row="4">
@@ -123,7 +126,8 @@
                         Height="60"
                         Width="250"
                         FontSize="20"
-                        HorizontalAlignment="Left">
+                        HorizontalAlignment="Left"
+                        PreviewTextInput="AllowNumbersOnlyInTextbox">
                     </TextBox>
                 </Grid>
                 <Grid Grid.Row="5">
