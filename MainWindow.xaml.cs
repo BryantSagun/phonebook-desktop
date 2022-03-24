@@ -62,5 +62,18 @@ namespace phonebook_desktop
             contactslist.ItemsSource = records.DefaultView;
             contactslist.Items.Refresh();
         }
+
+        private void filterContacts(object sender, TextChangedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(searchContact.Text) | searchContact.Text.Trim().Length == 0)
+            {
+                contactslist.ItemsSource = contactController.getContacts().DefaultView;
+            }
+            else
+            {
+                contactslist.ItemsSource = contactController.getFilteredContacts(searchContact.Text).DefaultView;
+            }
+            contactslist.Items.Refresh();
+        }
     }
 }

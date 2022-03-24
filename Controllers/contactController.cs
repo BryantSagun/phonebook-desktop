@@ -33,6 +33,12 @@ namespace phonebook_desktop.Controllers
             dbc.deleteContact(id);
         }
 
+        public static DataTable getFilteredContacts(String keyword)
+        {
+            dbController dbc = new dbController();
+            return dbc.getFilteredContacts(keyword);
+        }
+
         public static Boolean checkValidString(string data)
         {
             Boolean result = false;

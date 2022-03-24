@@ -36,6 +36,17 @@ namespace phonebook_desktop.Controllers
             sda.Fill(dt);
             return dt;
         }
+
+        public DataTable getFilteredContacts(string keyword)
+        {
+            query = $"EXEC usp_ReadRecordsFirstOrLastNameFilter '%{keyword}%'";
+            SqlCommand cmd = thisConnection.CreateCommand();
+            executeQuery(query, cmd);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable("ContactDetails");
+            sda.Fill(dt);
+            return dt;
+        }
         public void createNewContact(string lastname, string firstname, string middlename, string gender, string phonenumber)
         {
             query = $"EXEC usp_createSingleRecord '{lastname}', '{firstname}', '{middlename}', '{gender}', '{phonenumber}'";

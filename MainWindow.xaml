@@ -19,7 +19,8 @@
 
         <Grid Grid.Row="0" Background="#131313">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1100"/>
+                <ColumnDefinition Width="900"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
@@ -30,10 +31,25 @@
                        VerticalAlignment="Center">Phonebook</Label>
             </Grid>
             <Grid Grid.Column="1">
+                <TextBox 
+                    x:Name="searchContact"
+                    Grid.Column="1"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    md:HintAssist.Hint="Search Contact"
+                    Background="#FFFFFF"
+                    BorderBrush="#FFFFFF"
+                    Height="50"
+                    Width="160"
+                    TextChanged="filterContacts"
+                    >
+                </TextBox>
+            </Grid>
+            <Grid Grid.Column="2">
                 <Button FontSize="20" 
                         Height="50" 
                         Width="Auto"
                         Background="#FFFFFF"
+                        BorderBrush="#FFFFFF"
                         Foreground="#131313" 
                         Margin="0,0,20,0"
                         Click="btnClick_AddContact">
@@ -56,8 +72,7 @@
                           ColumnWidth="200"
                           AutoGenerateColumns="False"
                           CanUserAddRows="False"
-                          FontSize="14"
-                          >
+                          FontSize="14">
                     <DataGrid.ColumnHeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="FontWeight"  Value="Bold" />
@@ -66,6 +81,7 @@
                             <Setter Property="Background" Value="#3F3F3F"/>
                             <Setter Property="Foreground" Value="#FFFFFF"/>
                             <Setter Property="Height" Value="60"/>
+                            <Setter Property="FontSize" Value="18"/>
                         </Style>
                     </DataGrid.ColumnHeaderStyle>
                     <DataGrid.RowStyle>
@@ -74,7 +90,6 @@
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="#494848" />
                                     <Setter Property="Foreground" Value="#FFFFFF" />
-                                    <Setter Property="FontWeight" Value="Bold" />
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -93,8 +108,6 @@
                                                 <StackPanel Orientation="Horizontal">
                                                     <md:PackIcon Kind="ApplicationEditOutline" 
                                                      VerticalAlignment="Center"
-                                                     Height="15"
-                                                     Width="15"
                                                     />
                                                 </StackPanel>
                                             </Button.Content>
@@ -114,9 +127,7 @@
                                             <Button.Content>
                                                 <StackPanel Orientation="Horizontal">
                                                     <md:PackIcon Kind="Delete" 
-                                                     VerticalAlignment="Center"
-                                                     Height="15"
-                                                     Width="15"
+                                                     VerticalAlignment="Center"       
                                                     />
                                                 </StackPanel>
                                             </Button.Content>
@@ -125,11 +136,11 @@
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTextColumn Binding="{Binding LastName}" Header="Last Name" Width="*"/>
-                        <DataGridTextColumn Binding="{Binding FirstName}" Header="First Name" Width="*"/>
-                        <DataGridTextColumn Binding="{Binding MiddleName}" Header="Middle Name" Width="*"/>
-                        <DataGridTextColumn Binding="{Binding Gender}" Header="Gender" Width="*"/>
-                        <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="Phone Number" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding LastName}" Header="LAST NAME" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding FirstName}" Header="FIRST NAME" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding MiddleName}" Header="MIDDLE NAME" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding Gender}" Header="GENDER" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="CONTACT NUMBER" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
