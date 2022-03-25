@@ -1,6 +1,7 @@
 ﻿using phonebook_desktop.Controllers;
 using phonebook_desktop.Models;
 using phonebook_desktop.Views;
+using phonebook_desktop.Views.confirmationBoxes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,8 +29,7 @@ namespace phonebook_desktop
         public MainWindow()
         {
             InitializeComponent();
-            contactslist.ItemsSource = contactController.getContacts().DefaultView;
-            contactslist.Items.Refresh();
+            refreshContactslist();
         }
 
         private void btnClick_AddContact(object sender, RoutedEventArgs e)
@@ -57,10 +57,15 @@ namespace phonebook_desktop
         private void btnClick_DeleteContact(object sender, RoutedEventArgs e)
         {
             DataRowView row = (DataRowView)contactslist.SelectedItem;
-            contactController.deleteContact(row["ID"].ToString());
-            DataTable records = dbc.getContacts();
-            contactslist.ItemsSource = records.DefaultView;
-            contactslist.Items.Refresh();
+            string lastName = row["LastName"].ToString();
+            string firstName = row["FirstName"].ToString();
+            string id = row["ID"].ToString();
+            DeleteRecordConfirmationBox dcb = new DeleteRecordConfirmationBox(lastName, firstName);
+            if (dcb.ShowDialog() == true)
+            {
+                contactController.deleteContact(id);
+                refreshContactslist();
+            }
         }
 
         private void filterContacts(object sender, TextChangedEventArgs e)
@@ -73,6 +78,12 @@ namespace phonebook_desktop
             {
                 contactslist.ItemsSource = contactController.getFilteredContacts(searchContact.Text).DefaultView;
             }
+            contactslist.Items.Refresh();
+        }
+
+        private void refreshContactslist()
+        {
+            contactslist.ItemsSource = contactController.getContacts().DefaultView;
             contactslist.Items.Refresh();
         }
     }

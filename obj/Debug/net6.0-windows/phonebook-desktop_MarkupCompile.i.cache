@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Bryant Kyle\Documents\Projects\phonebook-desktop\App.xaml
-3-1172361644
+41621125983
 
-11-492541723
+12-1115781946
 207747858160
-MainWindow.xaml;Views\Create.xaml;Views\Edit.xaml;
+MainWindow.xaml;Views\confirmationBoxes\DeleteRecordConfirmationBox.xaml;Views\Create.xaml;Views\Edit.xaml;
 
-True
+False
 

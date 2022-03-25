@@ -36,7 +36,7 @@ namespace phonebook_desktop.Views
                    !contactController.checkValidString(middleName.Text) |
                    !contactController.checkValidString(gender.Text) |
                    !contactController.checkValidString(phoneNumber.Text)
-                   )
+               )
             {
                 MessageBox.Show("There are empty fields. Please check your form.");
             }

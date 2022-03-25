@@ -81,7 +81,7 @@
                             <Setter Property="Background" Value="#3F3F3F"/>
                             <Setter Property="Foreground" Value="#FFFFFF"/>
                             <Setter Property="Height" Value="60"/>
-                            <Setter Property="FontSize" Value="18"/>
+                            <Setter Property="FontSize" Value="20"/>
                         </Style>
                     </DataGrid.ColumnHeaderStyle>
                     <DataGrid.RowStyle>
